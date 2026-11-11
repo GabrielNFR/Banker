@@ -1,0 +1,16 @@
+Script started on 2026-11-11 17:00:59-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="122" LINES="14"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ date
+[?2004lWed Nov 11 17:01:04 -03 2026
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ pwd
+[?2004l/home/skickle/OS/Deadlock
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ whoami
+[?2004lskickle
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ make
+[?2004lgcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -c banker.c -o banker.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -o banker banker.o -pthread
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ ./banker 10 5 7
+[?2004lvetor[0] = 10
+vetor[1] = 5
+vetor[2] = 7
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [K]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [?2004l
+exit
