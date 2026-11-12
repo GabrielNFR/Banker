@@ -12,5 +12,6 @@ typedef struct {
 
 int validaInt(const char *s, long *saida);
 int validaCustomer(const char *f, int m_esperado, Customer *c);
+void liberaCustomer(Customer *c);
 
 #endif

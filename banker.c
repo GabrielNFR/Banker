@@ -24,9 +24,13 @@ int main(int argc, char **argv) {
         }
     }
 
+    Customer c = {0};
+    int resultado = validaCustomer("customer.txt", num_recursos, &c);
+
+    liberaCustomer(&c);
     free(total);
 
-    return 0;
+    return resultado;
 }
 
 int validaInt(const char *s, long *saida) {
@@ -57,7 +61,7 @@ int validaInt(const char *s, long *saida) {
 int validaCustomer(const char *f, int m_esperado, Customer *c) {
    FILE *fp = fopen(f, "r");
    if (fp == NULL) {
-       fprintf(stderr, "Erro ao abrir o arquivo customer.txt");
+       fprintf(stderr, "Erro ao abrir o arquivo customer.txt\n");
        return 1;
    }
 
@@ -65,7 +69,7 @@ int validaCustomer(const char *f, int m_esperado, Customer *c) {
    size_t cap = 0;
    int n = 0;
    int m = -1;
-
+   
    memset(c, 0, sizeof *c);
    
    while (getline(&linha, &cap, fp) != -1) {
@@ -104,6 +108,7 @@ int validaCustomer(const char *f, int m_esperado, Customer *c) {
            goto erro;
        }
    }
+   if (ferror(fp)) { fprintf(stderr, "erro de leitura em '%s'\n", f); goto erro; }
 
    if (n == 0) { fprintf(stderr, "arquivo vazio\n"); goto erro; }
    if (m != m_esperado) {
@@ -111,10 +116,79 @@ int validaCustomer(const char *f, int m_esperado, Customer *c) {
        goto erro;
    }
 
+   c->maximum = calloc(n, sizeof(*c->maximum));
+   if (!c->maximum) { perror("calloc"); goto erro; }
+   for (int i = 0; i < n; i++) {
+       if (!(c->maximum[i] = malloc(m * sizeof(**c->maximum)))) {
+           perror("malloc");
+           goto erro;
+       }
+   }
+
+   if (fseek(fp, 0, SEEK_SET) != 0) { perror("fseek"); goto erro; }
+
+   for (int i = 0; i < n; i++) {
+       if (getline(&linha, &cap, fp) == -1) {
+           fprintf(stderr, "erro relendo linha %d\n", i + 1);
+           goto erro;
+       }
+       
+       linha[strcspn(linha, "\r\n")] = '\0';
+       const char *s = linha;
+
+       for (int j = 0; j < m; j++) {
+           while (*s == ' ' || *s == '\t') s++;
+           char *fim;
+           c->maximum[i][j] = strtol(s, &fim, 10);
+           s = fim;
+           while (*s == ' ' || *s == '\t') s++;
+           if (*s == ',') s++;
+       }
+   }
+
+   fclose(fp);
+   free(linha);
+
+   c->num_clientes = n;
+   c->num_recursos = m;
+   
    return 0;
 
 erro:
-    fclose(fp);
+    if (fp) fclose(fp);
     free(linha);
+    if (c->maximum) {
+        for (int i = 0; i < n; i++) free(c->maximum[i]);
+        free(c->maximum);
+        c->maximum = NULL;
+    }
     return 1;
+}
+
+void liberaCustomer(Customer *c) {
+    if (c == NULL) return;
+
+    if (c->maximum != NULL) {
+        for (int i = 0; i < c->num_clientes; i++) free(c->maximum[i]);
+        free(c->maximum);
+        c->maximum = NULL;
+    }
+
+    if (c->allocation != NULL) {
+        for (int i = 0; i < c->num_clientes; i++) free(c->allocation[i]);
+        free(c->allocation);
+        c->allocation = NULL;
+    }
+
+    if (c->need != NULL) {
+        for (int i = 0; i < c->num_clientes; i++) free(c->need[i]);
+        free(c->need);
+        c->need = NULL;
+    }
+
+    free(c->available);
+    c->available = NULL;
+
+    c->num_clientes = 0;
+    c->num_recursos = 0;
 }
