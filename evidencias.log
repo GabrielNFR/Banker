@@ -14,3 +14,48 @@ vetor[1] = 5
 vetor[2] = 7
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [K]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [?2004l
 exit
+Script started on 2026-11-11 22:03:21-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="122" LINES="14"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ date
+[?2004lWed Nov 11 22:03:24 -03 2026
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ pwd
+[?2004l/home/skickle/OS/Deadlock
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ whoami
+[?2004lskickle
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [K]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [K]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ make
+[?2004lgcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -c banker.c -o banker.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -o banker banker.o -pthread
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ ./banker 10 5 7
+[?2004l0[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ c[Kmake clean && make
+[?2004lrm -f banker banker.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -c banker.c -o banker.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -o banker banker.o -pthread
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ make clean && make[3P./banker 10 5 7
+[?2004l0
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ date
+[?2004lWed Nov 11 23:39:32 -03 2026
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ cat -A customer_teste.txt
+[?2004l7,5,3,[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ ./banker 10 5 7
+[?2004l0
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ echo "status=$?"
+[?2004lstatus=0
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ date
+[?2004lWed Nov 11 23:40:08 -03 2026
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ exit
+[?2004lexit
+
+Script done on 2026-11-11 23:40:18-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-11-11 23:40:54-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="122" LINES="14"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ make lc[K[Kclean && make
+[?2004lrm -f banker banker.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -c banker.c -o banker.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -o banker banker.o -pthread
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ cat [K[K[K[Kdate
+[?2004lWed Nov 11 23:42:06 -03 2026
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ cat -A customer_teste.txt
+[?2004l7,5,3,[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ ./banker 10 5 7
+[?2004llinha 1: numero esperado
+1
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [K]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [K]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ exit
+[?2004lexit
+
+Script done on 2026-11-11 23:45:27-03:00 [COMMAND_EXIT_CODE="0"]

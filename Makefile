@@ -1,5 +1,5 @@
 CC      = gcc
-CFLAGS  = -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread
+CFLAGS  = -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g 
 LDFLAGS = -pthread
 
 TARGET = banker
