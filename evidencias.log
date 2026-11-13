@@ -1,163 +1,263 @@
 Script started on 2026-11-11 17:00:59-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="122" LINES="14"]
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ date
-[?2004lWed Nov 11 17:01:04 -03 2026
+[?2004l
+Wed Nov 11 17:01:04 -03 2026
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ pwd
-[?2004l/home/skickle/OS/Deadlock
+[?2004l
+/home/skickle/OS/Deadlock
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ whoami
-[?2004lskickle
+[?2004l
+skickle
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ make
-[?2004lgcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -c banker.c -o banker.o
+[?2004l
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -c banker.c -o banker.o
 gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g -pthread -o banker banker.o -pthread
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ ./banker 10 5 7
-[?2004lvetor[0] = 10
+[?2004l
+vetor[0] = 10
 vetor[1] = 5
 vetor[2] = 7
-[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [K]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [?2004l
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [?2004l
+
 exit
 Script started on 2026-11-11 22:03:21-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="122" LINES="14"]
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ date
-[?2004lWed Nov 11 22:03:24 -03 2026
+[?2004l
+Wed Nov 11 22:03:24 -03 2026
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ pwd
-[?2004l/home/skickle/OS/Deadlock
+[?2004l
+/home/skickle/OS/Deadlock
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ whoami
-[?2004lskickle
-[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [K]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [K]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ make
-[?2004lgcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -c banker.c -o banker.o
+[?2004l
+skickle
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ make
+[?2004l
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -c banker.c -o banker.o
 gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -o banker banker.o -pthread
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ ./banker 10 5 7
-[?2004l0[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ c[Kmake clean && make
-[?2004lrm -f banker banker.o
+[?2004l
+0[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ c[Kmake clean && make
+[?2004l
+rm -f banker banker.o
 gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -c banker.c -o banker.o
 gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -o banker banker.o -pthread
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ make clean && make[3P./banker 10 5 7
-[?2004l0
+[?2004l
+0
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ date
-[?2004lWed Nov 11 23:39:32 -03 2026
+[?2004l
+Wed Nov 11 23:39:32 -03 2026
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ cat -A customer_teste.txt
-[?2004l7,5,3,[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ ./banker 10 5 7
-[?2004l0
+[?2004l
+7,5,3,[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ ./banker 10 5 7
+[?2004l
+0
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ echo "status=$?"
-[?2004lstatus=0
+[?2004l
+status=0
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ date
-[?2004lWed Nov 11 23:40:08 -03 2026
+[?2004l
+Wed Nov 11 23:40:08 -03 2026
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ exit
-[?2004lexit
+[?2004l
+exit
 
 Script done on 2026-11-11 23:40:18-03:00 [COMMAND_EXIT_CODE="0"]
 Script started on 2026-11-11 23:40:54-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="122" LINES="14"]
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ make lc[K[Kclean && make
-[?2004lrm -f banker banker.o
+[?2004l
+rm -f banker banker.o
 gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -c banker.c -o banker.o
 gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -o banker banker.o -pthread
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ cat [K[K[K[Kdate
-[?2004lWed Nov 11 23:42:06 -03 2026
+[?2004l
+Wed Nov 11 23:42:06 -03 2026
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ cat -A customer_teste.txt
-[?2004l7,5,3,[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ ./banker 10 5 7
-[?2004llinha 1: numero esperado
+[?2004l
+7,5,3,[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ ./banker 10 5 7
+[?2004l
+linha 1: numero esperado
 1
-[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [K]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [K]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ exit
-[?2004lexit
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ exit
+[?2004l
+exit
 
 Script done on 2026-11-11 23:45:27-03:00 [COMMAND_EXIT_CODE="0"]
 Script started on 2026-11-12 16:17:22-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="122" LINES="14"]
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ date
-[?2004lThu Nov 12 16:17:25 -03 2026
+[?2004l
+Thu Nov 12 16:17:25 -03 2026
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ pwd
-[?2004l/home/skickle/OS/Deadlock
+[?2004l
+/home/skickle/OS/Deadlock
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ whoami
-[?2004lskickle
+[?2004l
+skickle
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ make
-[?2004lgcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -c banker.c -o banker.o
+[?2004l
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -c banker.c -o banker.o
 gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -o banker banker.o -pthread
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ ./banker[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K./make
-[?2004lbash: ./make: No such file or directory
+[?2004l
+bash: ./make: No such file or directory
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ make
-[?2004lgcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -c banker.c -o banker.o
+[?2004l
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -c banker.c -o banker.o
 gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -o banker banker.o -pthread
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ date
-[?2004lThu Nov 12 16:47:44 -03 2026
+[?2004l
+Thu Nov 12 16:47:44 -03 2026
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ exit
-[?2004lexit
+[?2004l
+exit
 
 Script done on 2026-11-12 16:47:48-03:00 [COMMAND_EXIT_CODE="0"]
 Script started on 2026-11-12 16:47:53-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="122" LINES="14"]
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ teste
-[?2004lCommand 'teste' not found, did you mean:
+[?2004l
+Command 'teste' not found, did you mean:
   command 'test' from deb coreutils (9.4-3ubuntu6.2)
   command 'tests' from deb go-bluetooth (5.60-3ubuntu0.24.04.3)
   command 'testr' from deb python3-testrepository (0.0.20-8)
 Try: sudo apt install <deb name>
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ make clean && make
-[?2004lrm -f banker banker.o
+[?2004l
+rm -f banker banker.o
 gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -c banker.c -o banker.o
 gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -o banker banker.o -pthread
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ date
-[?2004lThu Nov 12 16:48:21 -03 2026
+[?2004l
+Thu Nov 12 16:48:21 -03 2026
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ ,/[K[Kdate
-[?2004lThu Nov 12 16:50:56 -03 2026
+[?2004l
+Thu Nov 12 16:50:56 -03 2026
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ exit
-[?2004lexit
+[?2004l
+exit
 
 Script done on 2026-11-12 16:51:17-03:00 [COMMAND_EXIT_CODE="0"]
 Script started on 2026-11-12 16:51:35-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="122" LINES="14"]
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ date
-[?2004lThu Nov 12 16:51:37 -03 2026
+[?2004l
+Thu Nov 12 16:51:37 -03 2026
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ pwd
-[?2004l/home/skickle/OS/Deadlock
+[?2004l
+/home/skickle/OS/Deadlock
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ whoami
-[?2004lskickle
+[?2004l
+skickle
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ make clean && make
-[?2004lrm -f banker banker.o
+[?2004l
+rm -f banker banker.o
 gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -c banker.c -o banker.o
 gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -o banker banker.o -pthread
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ mkdir -p [7m/tmp/banker-evidencia[27m/tmp/banker-evidencia
-[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mcp customer.txt /tmp/banker-evidencias/customer.txt[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp customer.txt /tmp/banker-evidencias/customer.txt
-[?2004lcp: cannot create regular file '/tmp/banker-evidencias/customer.txt': No such file or directory
+[?2004l
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mcp customer.txt /tmp/banker-evidencias/customer.txt[27m
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp customer.txt /tmp/banker-evidencias/customer.txt
+[?2004l
+cp: cannot create regular file '/tmp/banker-evidencias/customer.txt': No such file or directory
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ cp customer.txt /tmp/banker-evidencias/customer.txt[1P/customer.txt
-[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mecho "== valido =="[27mecho "== valido =="
-[?2004l== valido ==
-[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7menv -C /tmp/banker-evidencias /home/skickle/OS/Deadlock/banker 10 5 7[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cenv -C /tmp/banker-evidencias /home/skickle/OS/Deadlock/banker 10 5 7
-[?2004lenv: cannot change directory to '/tmp/banker-evidencias': No such file or directory
+[?2004l
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mecho "== valido =="[27mecho "== valido =="
+[?2004l
+== valido ==
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7menv -C /tmp/banker-evidencias /home/skickle/OS/Deadlock/banker 10 5 7[27m
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cenv -C /tmp/banker-evidencias /home/skickle/OS/Deadlock/banker 10 5 7
+[?2004l
+env: cannot change directory to '/tmp/banker-evidencias': No such file or directory
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ env -C /tmp/banker-evidencias /home/skickle/OS/Deadlock/banker 10 5 7[1P
-[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mecho "== ausente =="[27m
-[7mrm -f /tmp/banker-evidencias/customer.txt[27m
-[7menv -C /tmp/banker-evidencias /home/skickle/OS/Deadlock/banker 10 5 7[27m[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho "== ausente =="
-rm -f /tmp/banker-evidencias/customer.txt
-env -C /tmp/banker-evidencias /home/skickle/OS/Deadlock/banker 10 5 7[C[1P[A[A]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [Cnv -C /tmp/banker-evidencia /home/skickle/OS/Deadlock/banker 10 5 7
-[K
-[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccho "== ausente =="                                                
-rm -f /tmp/banker-evidencias/customer.txt
-env -C /tmp/banker-evidencia /home/skickle/OS/Deadlock/banker 10 5 7[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P/customer.txt
-
-[?2004l== ausente ==
+[?2004l
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mecho "== ausente =="[27m
+
+[7mrm -f /tmp/banker-evidencias/customer.txt[27m
+
+[7menv -C /tmp/banker-evidencias /home/skickle/OS/Deadlock/banker 10 5 7[27m[A[A
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho "== ausente =="
+
+rm -f /tmp/banker-evidencias/customer.txt
+
+env -C /tmp/banker-evidencias /home/skickle/OS/Deadlock/banker 10 5 7[C[1P[A[A
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [Cnv -C /tmp/banker-evidencia /home/skickle/OS/Deadlock/banker 10 5 7
+
+[K
+
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccho "== ausente =="                                                
+
+rm -f /tmp/banker-evidencias/customer.txt
+
+env -C /tmp/banker-evidencia /home/skickle/OS/Deadlock/banker 10 5 7
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P/customer.txt
+
+
+[?2004l
+== ausente ==
 Erro ao abrir o arquivo customer.txt
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mecho "== malformado =="[27m
-[7mprintf '7,5,3,\n' > /tmp/banker-evidencias/customer.txt[27m
-[7menv -C /tmp/banker-evidencias /home/skickle/OS/Deadlock/banker 10 5 7[27m[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho "== malformado =="
-printf '7,5,3,\n' > /tmp/banker-evidencias/customer.txt
-env -C /tmp/banker-evidencias /home/skickle/OS/Deadlock/banker 10 5 7[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P/customer.txt
-
-[?2004l== malformado ==
+
+[7mprintf '7,5,3,\n' > /tmp/banker-evidencias/customer.txt[27m
+
+[7menv -C /tmp/banker-evidencias /home/skickle/OS/Deadlock/banker 10 5 7[27m[A[A
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho "== malformado =="
+
+printf '7,5,3,\n' > /tmp/banker-evidencias/customer.txt
+
+env -C /tmp/banker-evidencias /home/skickle/OS/Deadlock/banker 10 5 7[1P
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P/customer.txt
+
+
+[?2004l
+== malformado ==
 linha 1: numero esperado
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mecho "== colunas =="[27m
-[7mprintf '7,5\n3,2\n9,0\n2,2\n4,3\n' > /tmp/banker-evidencias/customer.txt[27m
-[7menv -C /tmp/banker-evidencias /home/skickle/OS/Deadlock/banker 10 5 7[27m[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho "== colunas =="
-printf '7,5\n3,2\n9,0\n2,2\n4,3\n' > /tmp/banker-evidencias/customer.txt
-env -C /tmp/banker-evidencias /home/skickle/OS/Deadlock/banker 10 5 7[C[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P/customer.txt
-
-[?2004l== colunas ==
+
+[7mprintf '7,5\n3,2\n9,0\n2,2\n4,3\n' > /tmp/banker-evidencias/customer.txt[27m
+
+[7menv -C /tmp/banker-evidencias /home/skickle/OS/Deadlock/banker 10 5 7[27m[A[A
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho "== colunas =="
+
+printf '7,5\n3,2\n9,0\n2,2\n4,3\n' > /tmp/banker-evidencias/customer.txt
+
+env -C /tmp/banker-evidencias /home/skickle/OS/Deadlock/banker 10 5 7[C[1P
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P/customer.txt
+
+
+[?2004l
+== colunas ==
 arquivo tem 2 coluna(s), esperado 3
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mecho "== dois recursos =="[27m
-[7menv -C /tmp/banker-evidencias /home/skickle/OS/Deadlock/banker 10 5[27m[Aecho "== dois recursos =="
-env -C /tmp/banker-evidencias /home/skickle/OS/Deadlock/banker 10 5[1P
-[?2004l== dois recursos ==
+
+[7menv -C /tmp/banker-evidencias /home/skickle/OS/Deadlock/banker 10 5[27m[Aecho "== dois recursos =="
+
+env -C /tmp/banker-evidencias /home/skickle/OS/Deadlock/banker 10 5[1P
+[?2004l
+== dois recursos ==
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mecho "== valgrind valido =="[27m
-[7mcp customer.txt /tmp/banker-evidencias/customer.txt[27m
-[7menv -C /tmp/banker-evidencias valgrind --leak-check=full --show-leak-kinds=all /home/skickle/OS/Deadlock/banker 10 5 7[27m[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho "== valgrind valido =="
-cp customer.txt /tmp/banker-evidencias/customer.txt
-env -C /tmp/banker-evidencias valgrind --leak-check=full --show-leak-kinds=all /home/skickle/OS/Deadlock/banker 10 5 7[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P/customer.txt
-
-[?2004l== valgrind valido ==
+
+[7mcp customer.txt /tmp/banker-evidencias/customer.txt[27m
+
+[7menv -C /tmp/banker-evidencias valgrind --leak-check=full --show-leak-kinds=all /home/skickle/OS/Deadlock/banker 10 5 7[27m[A[A
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho "== valgrind valido =="
+
+cp customer.txt /tmp/banker-evidencias/customer.txt
+
+env -C /tmp/banker-evidencias valgrind --leak-check=full --show-leak-kinds=all /home/skickle/OS/Deadlock/banker 10 5 7[1P
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P/customer.txt
+
+
+[?2004l
+== valgrind valido ==
 ==36179== Memcheck, a memory error detector
 ==36179== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
 ==36179== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
@@ -173,21 +273,288 @@ arquivo tem 2 coluna(s), esperado 3
 ==36179== For lists of detected and suppressed errors, rerun with: -s
 ==36179== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mrm -rf /tmp/banker-evidencias[27mrm -rf /tmp/banker-evidencias[C[K
-[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ date
-[?2004lThu Nov 12 16:58:30 -03 2026
+[?2004l
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ date
+[?2004l
+Thu Nov 12 16:58:30 -03 2026
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ exit
-[?2004lexit
+[?2004l
+exit
 
 Script done on 2026-11-12 16:58:33-03:00 [COMMAND_EXIT_CODE="0"]
 Script started on 2026-11-13 15:50:37-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="122" LINES="14"]
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ ca[K[Kdate
-[?2004lFri Nov 13 15:50:41 -03 2026
+[?2004l
+Fri Nov 13 15:50:41 -03 2026
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ pwd
-[?2004l/home/skickle/OS/Deadlock
+[?2004l
+/home/skickle/OS/Deadlock
 [?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ whoami
-[?2004lskickle
-[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [K]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [K]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [K]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ make
-[?2004lgcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -c banker.c -o banker.o
+[?2004l
+skickle
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ make
+[?2004l
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -c banker.c -o banker.o
 gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -o banker banker.o -pthread
-[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [K]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ git add .
-[?2004l
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K
+]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ exit
+[?2004l
+exit
+
+Script done on 2026-11-13 16:45:44-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-11-13 16:45:50-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="123" LINES="14"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ date
+[?2004l
+Fri Nov 13 16:45:51 -03 2026
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ pwf[Kd
+[?2004l
+/home/skickle/OS/Deadlock
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ whoami
+[?2004l
+skickle
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ 
+[K]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ date
+[?2004lFri Nov 13 19:30:34 -03 2026
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ exit
+[?2004lexit
+
+Script done on 2026-11-13 19:30:36-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-11-13 19:31:06-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="118" LINES="14"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ e
+[?2004lCommand 'e' not found, but can be installed with:
+sudo apt install e-wrapper
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ date
+[?2004lFri Nov 13 19:31:39 -03 2026
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ cd /home/skickle/OS/Deadlock
+script -a evidencias.log
+date
+pwd
+whoami
+
+make clean && make
+
+mkdir -p /tmp/banker-ev-commands
+cp customer.txt /tmp/banker-ev-commands/customer.txt
+cp commands.txt /tmp/banker-ev-commands/commands.txt
+
+echo "== conteudo do commands.txt =="
+cat /tmp/banker-ev-commands/commands.txtecho "== caminho valido =="env -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7echo "status=$?"echo "== comandos armazenados =="env -C /tmp/banker-ev-commands gdb -q -batch \  -ex "set debuginfod enabled off" \  -ex "break liberaCommands" \  -ex "run 10 5 7" \  -ex "up" \  -ex "print comandos.quantidade" \  -ex "print comandos.itens[0]@11" \  -ex "print comandos.itens[0].recursos[0]" \  -ex "print comandos.itens[0].recursos[1]" \  -ex "print comandos.itens[0].recursos[2]" \  /home/skickle/OS/Deadlock/bankerecho "== arquivo ausente =="rm -f /tmp/banker-ev-commands/commands.txtenv -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7echo "== comando invalido =="printf 'XX 0 0 0 0\n' > /tmp/banker-ev-commands/commands.txtenv -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7echo "== faltam valores =="printf 'RQ 0 0 2\n' > /tmp/banker-ev-commands/commands.txtenv -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7echo "== sobram valores =="printf 'RQ 0 0 2 1 5\n' > /tmp/banker-ev-commands/commands.txtenv -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7echo "== cliente fora do intervalo =="printf 'RQ 9 0 0 0\n' > /tmp/banker-ev-commands/commands.txtenv -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7echo "== print com token extra =="printf '* 0\n' > /tmp/banker-ev-commands/commands.txtenv -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7echo "== valor negativo =="printf 'RQ 0 -1 0 0\n' > /tmp/banker-ev-commands/commands.txtenv -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7echo "== linha vazia =="printf '\n' > /tmp/banker-ev-commands/commands.txtenv -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7[7mecho "== valgrind caminho valido =="[27m[7mcp commands.txt /tmp/banker-ev-commands/commands.txt[27m[7menv -C /tmp/banker-ev-commands valgrind --leak-check=full --show-leak-kinds=all /home/skickle/OS/Deadlock/banker 10 5 [27m[7m7[27m[7mecho "== valgrind caminho de erro =="[27m[7mprintf 'RQ 0 0 2 1 5\n' > /tmp/banker-ev-commands/commands.txt[27m[7menv -C /tmp/banker-ev-commands valgrind --leak-check=summary /home/skickle/OS/Deadlock/banker 10 5 7[27m[7mrm -rf /tmp/banker-ev-commands[27m[7mdate[27m[7mexit[27mecho "== valgrind caminho valido =="cp commands.txt /tmp/banker-ev-commands/commands.txtenv -C /tmp/banker-ev-commands valgrind --leak-check=full --show-leak-kinds=all /home/skickle/OS/Deadlock/banker 10 5 7echo "== valgrind caminho de erro =="printf 'RQ 0 0 2 1 5\n' > /tmp/banker-ev-commands/commands.txtenv -C /tmp/banker-ev-commands valgrind --leak-check=summary /home/skickle/OS/Deadlock/banker 10 5 7rm -rf /tmp/banker-ev-commandsdateexit[A[A[A[A[A[A[A[A[A[A[A[A[A]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [?2004l
+exit
+Script started on 2026-11-13 19:33:37-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="118" LINES="14"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ test[K[K[K[Kdate
+[?2004lFri Nov 13 19:33:41 -03 2026
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mmake clean && make[27mmake clean && make
+[?2004lrm -f banker banker.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -c banker.c -o banker.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -o banker banker.o -pthread
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mmkdir -p /tmp/banker-ev-commands[27mmkdir -p /tmp/banker-ev-commands
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mcp customer.txt /tmp/banker-ev-commands/customer.txt[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp customer.txt /tmp/banker-ev-commands/customer.txt
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mcp commands.txt /tmp/banker-ev-commands/commands.txt[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp commands.txt /tmp/banker-ev-commands/commands.txt
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mecho "== conteudo do commands.txt =="[27m
+[7mcat /tmp/banker-ev-commands/commands.txt[27m[Aecho "== conteudo do commands.txt =="
+cat /tmp/banker-ev-commands/commands.txt
+[?2004l== conteudo do commands.txt ==
+RQ 0 0 2 1
+RQ 2 3 0 2
+RQ 1 2 0 0
+RQ 4 0 0 2
+RL 0 0 1 1
+RQ 3 2 1 1
+*
+RQ 4 4 0 0
+RQ 1 1 0 2
+RQ 0 0 2 0
+RQ 2 0 1 0[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mecho "== caminho valido =="[27m
+[7menv -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7[27m
+[7mecho "status=$?"[27m[A[A]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ echo "== caminho valido =="
+env -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7
+echo "status=$?"
+[?2004l== caminho valido ==
+status=0
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mecho "== comandos armazenados =="[27m
+[7menv -C /tmp/banker-ev-commands gdb -q -batch \[27m
+[7m  -ex "set debuginfod enabled off" \[27m
+[7m  -ex "break liberaCommands" \[27m
+[7m  -ex "run 10 5 7" \[27m
+[7m  -ex "up" \[27m
+[7m  -ex "print comandos.quantidade" \[27m
+[7m  -ex "print comandos.itens[0]@11" \[27m
+[7m  -ex "print comandos.itens[0].recursos[0]" \[27m
+[7m  -ex "print comandos.itens[0].recursos[1]" \[27m
+[7m  -ex "print comandos.itens[0].recursos[2]" \[27m
+[7m  /home/skickle/OS/Deadlock/banker[27m[A[A[A[A[A[A[A[A[A[A[Aecho "== comandos armazenados =="
+env -C /tmp/banker-ev-commands gdb -q -batch \
+  -ex "set debuginfod enabled off" \
+  -ex "break liberaCommands" \
+  -ex "run 10 5 7" \
+  -ex "up" \
+  -ex "print comandos.quantidade" \
+  -ex "print comandos.itens[0]@11" \
+  -ex "print comandos.itens[0].recursos[0]" \
+  -ex "print comandos.itens[0].recursos[1]" \
+  -ex "print comandos.itens[0].recursos[2]" \
+  /home/skickle/OS/Deadlock/banker
+[?2004l== comandos armazenados ==
+Breakpoint 1 at 0x1df0: file banker.c, line 352.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, liberaCommands (lista=lista@entry=0x7fffffffd250) at banker.c:352
+352	void liberaCommands(ListaComandos *lista) {
+#1  0x00005555555553c1 in main (argc=<optimized out>, argv=0x7fffffffd3e8) at banker.c:34
+34	    liberaCommands(&comandos);
+$1 = 11
+$2 = {{tipo = CMD_RQ, cliente = 0, recursos = 0x55555555b6c0}, {tipo = CMD_RQ, cliente = 2, recursos = 0x55555555b6e0}, {tipo = CMD_RQ, cliente = 1, recursos = 0x55555555b700}, {tipo = CMD_RQ, cliente = 4, recursos = 0x55555555b720}, {tipo = CMD_RL, cliente = 0, recursos = 0x55555555b740}, {tipo = CMD_RQ, cliente = 3, recursos = 0x55555555b760}, {tipo = CMD_PRINT, cliente = -1, recursos = 0x0}, {tipo = CMD_RQ, cliente = 4, recursos = 0x55555555b780}, {tipo = CMD_RQ, cliente = 1, recursos = 0x55555555b7a0}, {tipo = CMD_RQ, cliente = 0, recursos = 0x55555555b7c0}, {tipo = CMD_RQ, cliente = 2, recursos = 0x55555555b7e0}}
+$3 = 0
+$4 = 2
+$5 = 1
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mecho "== arquivo ausente =="[27m
+[7mrm -f /tmp/banker-ev-commands/commands.txt[27m
+[7menv -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7[27m[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho "== arquivo ausente =="
+rm -f /tmp/banker-ev-commands/commands.txt
+env -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7
+[?2004l== arquivo ausente ==
+Erro ao abrir o arquivo commands.txt
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mecho "== comando invalido =="[27m
+[7mprintf 'XX 0 0 0 0\n' > /tmp/banker-ev-commands/commands.txt[27m
+[7menv -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7[27m[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho "== comando invalido =="
+printf 'XX 0 0 0 0\n' > /tmp/banker-ev-commands/commands.txt
+env -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7
+[?2004l== comando invalido ==
+linha 1: comando inválido
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mecho "== faltam valores =="[27m
+[7mprintf 'RQ 0 0 2\n' > /tmp/banker-ev-commands/commands.txt[27m
+[7menv -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7[27m[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho "== faltam valores =="
+printf 'RQ 0 0 2\n' > /tmp/banker-ev-commands/commands.txt
+env -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7
+[?2004l== faltam valores ==
+linha 1: esperava 3 valores, encontrou 2
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mecho "== sobram valores =="[27m
+[7mprintf 'RQ 0 0 2 1 5\n' > /tmp/banker-ev-commands/commands.txt[27m
+[7menv -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7[27m[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho "== sobram valores =="
+printf 'RQ 0 0 2 1 5\n' > /tmp/banker-ev-commands/commands.txt
+env -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7
+[?2004l== sobram valores ==
+linha 1: token extra
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mecho "== cliente fora do intervalo =="[27m
+[7mprintf 'RQ 9 0 0 0\n' > /tmp/banker-ev-commands/commands.txt[27m
+[7menv -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7[27m[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho "== cliente fora do intervalo =="
+printf 'RQ 9 0 0 0\n' > /tmp/banker-ev-commands/commands.txt
+env -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7
+[?2004l== cliente fora do intervalo ==
+linha 1: cliente 9 fora do intervalo
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mecho "== print com token extra =="[27m
+[7mprintf '* 0\n' > /tmp/banker-ev-commands/commands.txt[27m
+[7menv -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7[27m[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho "== print com token extra =="
+printf '* 0\n' > /tmp/banker-ev-commands/commands.txt
+env -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7
+[?2004l== print com token extra ==
+linha 1: token extra
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mecho "== print com token extra =="[27m
+[7mprintf '* 0\n' > /tmp/banker-ev-commands/commands.txt[27m
+[7menv -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7[27m[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho "== print com token extra =="
+printf '* 0\n' > /tmp/banker-ev-commands/commands.txt
+env -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7
+[?2004l== print com token extra ==
+linha 1: token extra
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mecho "== valor negativo =="[27m
+[7mprintf 'RQ 0 -1 0 0\n' > /tmp/banker-ev-commands/commands.txt[27m
+[7menv -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7[27m[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho "== valor negativo =="
+printf 'RQ 0 -1 0 0\n' > /tmp/banker-ev-commands/commands.txt
+env -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7
+[?2004l== valor negativo ==
+linha 1: valor inválido
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mecho "== linha vazia =="[27m
+[7mprintf '\n' > /tmp/banker-ev-commands/commands.txt[27m
+[7menv -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7[27m[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho "== linha vazia =="
+printf '\n' > /tmp/banker-ev-commands/commands.txt
+env -C /tmp/banker-ev-commands /home/skickle/OS/Deadlock/banker 10 5 7
+[?2004l== linha vazia ==
+linha 1 vazia
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mecho "== valgrind caminho valido =="[27m
+[7mcp commands.txt /tmp/banker-ev-commands/commands.txt[27m
+[7menv -C /tmp/banker-ev-commands valgrind --leak-check=full --show-leak-kinds=all /home/skickle/OS/Deadlock/banker 10 5 [27m[7m7[27m[A[A[A]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ echo "== valgrind caminho valido =="
+cp commands.txt /tmp/banker-ev-commands/commands.txt
+env -C /tmp/banker-ev-commands valgrind --leak-check=full --show-leak-kinds=all /home/skickle/OS/Deadlock/banker 10 5 7
+[?2004l== valgrind caminho valido ==
+==54638== Memcheck, a memory error detector
+==54638== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==54638== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==54638== Command: /home/skickle/OS/Deadlock/banker 10 5 7
+==54638== 
+==54638== 
+==54638== HEAP SUMMARY:
+==54638==     in use at exit: 0 bytes in 0 blocks
+==54638==   total heap usage: 24 allocs, 24 frees, 9,976 bytes allocated
+==54638== 
+==54638== All heap blocks were freed -- no leaks are possible
+==54638== 
+==54638== For lists of detected and suppressed errors, rerun with: -s
+==54638== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mecho "== valgrind caminho de erro =="[27m
+[7mprintf 'RQ 0 0 2 1 5\n' > /tmp/banker-ev-commands/commands.txt[27m
+[7menv -C /tmp/banker-ev-commands valgrind --leak-check=summary /home/skickle/OS/Deadlock/banker 10 5 7[27m[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho "== valgrind caminho de erro =="
+printf 'RQ 0 0 2 1 5\n' > /tmp/banker-ev-commands/commands.txt
+env -C /tmp/banker-ev-commands valgrind --leak-check=summary /home/skickle/OS/Deadlock/banker 10 5 7
+[?2004l== valgrind caminho de erro ==
+==54658== Memcheck, a memory error detector
+==54658== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==54658== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==54658== Command: /home/skickle/OS/Deadlock/banker 10 5 7
+==54658== 
+linha 1: token extra
+==54658== 
+==54658== HEAP SUMMARY:
+==54658==     in use at exit: 0 bytes in 0 blocks
+==54658==   total heap usage: 15 allocs, 15 frees, 9,600 bytes allocated
+==54658== 
+==54658== All heap blocks were freed -- no leaks are possible
+==54658== 
+==54658== For lists of detected and suppressed errors, rerun with: -s
+==54658== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [7mrm -rf /tmp/banker-ev-commands[27mrm -rf /tmp/banker-ev-commands
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ dat4e
+[?2004lCommand 'dat4e' not found, did you mean:
+  command 'date' from deb coreutils (9.4-3ubuntu6.2)
+Try: sudo apt install <deb name>
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ date
+[?2004lFri Nov 13 19:36:32 -03 2026
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ exit
+[?2004lexit
+
+Script done on 2026-11-13 19:36:34-03:00 [COMMAND_EXIT_CODE="0"]

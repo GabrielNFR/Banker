@@ -6,12 +6,14 @@ O enunciado pede a implementação do algoritmo de Banker em C, com número de c
 
 | Requisito do enunciado | Status | Como testar / evidência |
 |:-----------------------|:-------|:------------------------|
-| Implementar em C, compilar com Makefile e gerar o executável `banker` | OK | `make clean && make` compila sem warnings com `-Werror`. Evidência: `evidencias.log`, 2026-11-12 16:51:37-03:00. |
+| Implementar em C, compilar com Makefile e gerar o executável `banker` | OK | `make clean && make` compila sem warnings com `-Werror`. Evidência: `evidencias.log`, 2026-11-13 19:33:41-03:00. |
 | Usar dimensões dinâmicas para os recursos | OK | `m = argc - 1`; o teste com dois recursos e dois argumentos terminou sem erro. Evidência: `evidencias.log`, 2026-11-12 16:51:37-03:00. |
 | Receber os argumentos como número de instâncias por recurso | Parcial | `./banker 10 5 7` é aceito e os valores são convertidos para `long`. O vetor é guardado em `total`. Evidência: `evidencias.log`, 2026-11-11 17:01:04-03:00. |
 | Ler `customer.txt` e preencher a matriz `Maximum` | OK | O caminho válido terminou sem erro; a leitura e o preenchimento estão em `validaCustomer`. Evidência: `evidencias.log`, 2026-11-12 16:51:37-03:00. |
 | Tratar erro de abertura e formato do `customer.txt` | OK | Arquivo ausente, linha malformada e colunas incompatíveis retornaram erro. Evidência: `evidencias.log`, 2026-11-12 16:51:37-03:00. |
-| Liberar a memória alocada | OK | O valgrind não encontrou vazamentos no caminho válido. Evidência: `evidencias.log`, 2026-11-12 16:51:37-03:00. |
+| Ler `commands.txt` e validar `RQ`, `RL` e `*` | OK | O arquivo de exemplo gerou 11 comandos na ordem esperada; o GDB confirmou quantidade e tipos. Evidência: `evidencias.log`, 2026-11-13 19:33:41-03:00. |
+| Tratar erro de abertura e formato do `commands.txt` | OK | Arquivo ausente, comando inválido, valores faltando ou sobrando, cliente fora do intervalo, `*` com token extra, valor negativo e linha vazia retornaram erro. Evidência: `evidencias.log`, 2026-11-13 19:33:41-03:00. |
+| Liberar a memória alocada | OK | Valgrind sem vazamentos no caminho válido e no caminho de erro do `commands.txt`. Evidência: `evidencias.log`, 2026-11-13 19:33:41-03:00. |
 
 # 3. Como Reproduzir
 
@@ -25,28 +27,33 @@ make
 Executar:
 
 ```sh
+./banker <recurso A> <recurso B> <recurso C>
+Exemplo:
 ./banker 10 5 7
 ```
 
-Os testes de erro e o valgrind estão registrados no `evidencias.log`.
+O programa lê `customer.txt` e `commands.txt` no diretório atual. Os testes de erro e o valgrind estão registrados no `evidencias.log`.
 
 # 4. Arquitetura (resumida)
 
 **Arquivos e responsabilidades:**
 
-1. `banker.c`: ponto de entrada, validação dos argumentos, leitura de `customer.txt` em duas passagens, preenchimento de `maximum` e liberação com `liberaCustomer`.
-2. `banker.h`: definição da struct `Customer` e protótipos de `validaInt`, `validaCustomer` e `liberaCustomer`.
+1. `banker.c`: ponto de entrada, validação dos argumentos, leitura de `customer.txt` em duas passagens, leitura e validação de `commands.txt`, preenchimento de `maximum` e das listas, e liberação com `liberaCustomer` e `liberaCommands`.
+2. `banker.h`: definição das structs `Customer`, `Comando` e `ListaComandos` e protótipos de `parseLong`, `validaPos`, `validaCustomer`, `validaCommands`, `liberaCustomer` e `liberaCommands`.
 3. `Makefile`: compilação do executável `banker` e alvo `clean`.
-4. `evidencias.log`: log das sessões de terminal.
-5. `gnfr.pdf`: este arquivo, é o relatório da implementação.
+6. `evidencias.log`: log das sessões de terminal.
+7. `gnfr.pdf`: este arquivo, é o relatório da implementação.
 
 **Decisões técnicas:**
 
 1. Dimensões dinâmicas: `m = argc - 1`, porque o enunciado não fixa a quantidade de recursos. Consequência: a validação compara a quantidade de colunas com `m_esperado` e a matriz é alocada com `n` e `m`.
-2. Contagens em `long`: para evitar truncamento e permitir a checagem de overflow com `ERANGE`. Consequência: os valores são lidos com `strtol` e validados antes de serem aceitos.
-3. Parser manual com `strtol` em vez de `strtok`: para detectar campo vazio e vírgula final. Consequência: a validação rejeita esses casos.
-4. Leitura em duas passagens: a primeira valida o arquivo e conta as linhas; a segunda preenche `maximum`. Consequência: erros de formato são detectados antes da alocação da matriz.
-5. Liberação centralizada: `liberaCustomer` libera as matrizes e o vetor `available`. Consequência: o caminho de sucesso e o caminho de erro não deixam vazamentos, como mostra o valgrind.
+2. Contagens em `long`: para evitar truncamento e permitir a checagem de overflow com `ERANGE`. Consequência: os valores são lidos com `parseLong` e validados antes de serem aceitos.
+3. Parser manual com `strtol` no `customer.txt`: para detectar campo vazio e vírgula final. Consequência: a validação rejeita esses casos.
+4. Leitura de `customer.txt` em duas passagens: a primeira valida e conta as linhas; a segunda preenche `maximum`. Consequência: erros de formato são detectados antes da alocação da matriz.
+5. Leitura de `commands.txt` em duas passagens: a primeira conta as linhas; a segunda valida os tokens e preenche a lista. Consequência: a lista tem capacidade para todas as linhas e nenhum comando é executado durante o parsing.
+6. Comandos em memória: `Comando` guarda tipo, cliente e recursos; `ListaComandos` guarda o vetor e a quantidade. Consequência: a ordem do arquivo é preservada e a validação acontece antes de alterar o estado.
+7. Gramáticas separadas: `strtok` para os comandos separados por espaço e parser manual com vírgula para o `customer.txt`. Consequência: cada arquivo mantém o seu formato.
+8. Liberação centralizada: `liberaCustomer` libera as matrizes e o vetor `available`; `liberaCommands` libera a lista e os recursos dos comandos. Consequência: o caminho de sucesso e o caminho de erro não deixam vazamentos, como mostra o valgrind.
 
 # 5. Estratégias e Diário de Desenvolvimento
 
@@ -55,6 +62,7 @@ Os testes de erro e o valgrind estão registrados no `evidencias.log`.
 | Estratégia | Nome curto | Contexto | Motivo da troca (se houve) |
 |:-----------|:-----------|:---------|:---------------------------|
 | S1 | Validação sequencial com strtol | Validar o formato do `customer.txt` linha a linha, com contador de colunas | Não houve troca de estratégia até aqui |
+| S2 | Parsing de commands com strtok | Ler `commands.txt`, validar tokens e guardar a lista antes da execução | Estratégia nova para o segundo arquivo; S1 continua no `customer.txt` |
 
 ## 5.2 Diário de Tentativas
 
@@ -66,20 +74,15 @@ Os testes de erro e o valgrind estão registrados no `evidencias.log`.
 | 4 | S1 | Ajustei o laço e repeti o teste. A linha passou a ser rejeitada. | OK |  | 2026-11-11 23:42:06-03:00 | `evidencias.log` |
 | 5 | S1 | Implementei a segunda passagem e a liberação com `liberaCustomer`. | OK |  | 2026-11-12 16:51:37-03:00 | `evidencias.log` |
 | 6 | S1 | Testei o caminho válido, arquivo ausente, linha malformada, colunas incompatíveis e arquivo com dois recursos. | OK |  | 2026-11-12 16:51:37-03:00 | `evidencias.log` |
+| 7 | S2 | Implementei a leitura de `commands.txt` com validação de `RQ`, `RL` e `*` e armazenamento em lista. | OK |  | 2026-11-13 19:33:41-03:00 | `evidencias.log` |
+| 8 | S2 | Testei o `commands.txt` de exemplo e os casos inválidos: arquivo ausente, comando inválido, valores faltando ou sobrando, cliente fora do intervalo, `*` com token extra, valor negativo e linha vazia. | OK |  | 2026-11-13 19:33:41-03:00 | `evidencias.log` |
+| 9 | S2 | Rodei o valgrind no caminho válido e no caminho de erro do `commands.txt`. | OK |  | 2026-11-13 19:33:41-03:00 | `evidencias.log` |
 
 # 6. Evidências
 
 ## 6.1 Log automático
 
 Usei `script -a evidencias.log` nas sessões. O log registra comandos, saídas e timestamps.
-
-Na sessão iniciada em 2026-11-12 16:51:37-03:00:
-
-- `make clean && make` compilou sem warnings.
-- O caminho válido com `./banker 10 5 7` terminou sem erro.
-- Arquivo ausente, linha malformada e colunas incompatíveis retornaram erro.
-- O teste com dois recursos e dois argumentos terminou sem erro.
-- O valgrind não encontrou vazamentos no caminho válido: 0 bytes em uso no fim, 10 alocações e 10 liberações.
 
 ## 6.2 Prints
 
