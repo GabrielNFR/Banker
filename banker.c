@@ -10,22 +10,22 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    int num_recursos = argc - 1;
-    long *total = malloc(num_recursos * sizeof(long));
+    int NUMBER_OF_RESOURCES = argc - 1;
+    long *total = malloc(NUMBER_OF_RESOURCES * sizeof(long));
     if (total == NULL) {
         fprintf(stderr, "Erro ao alocar memória para o vetor 'total'.\n");
         return 1;
     }
 
-    for (int i = 0; i < num_recursos; i++) {
-        if (validaInt(argv[i + 1], &total[i]) != 0) {
+    for (int i = 0; i < NUMBER_OF_RESOURCES; i++) {
+        if (validaPos(argv[i + 1], &total[i]) != 0) {
             free(total);
             return 1;
         }
     }
 
     Customer c = {0};
-    int resultado = validaCustomer("customer.txt", num_recursos, &c);
+    int resultado = validaCustomer("customer.txt", NUMBER_OF_RESOURCES, &c);
 
     liberaCustomer(&c);
     free(total);
@@ -33,15 +33,35 @@ int main(int argc, char **argv) {
     return resultado;
 }
 
-int validaInt(const char *s, long *saida) {
+ResultadoParse parseLong(const char *s, char **fim, long *saida) {
     errno = 0;
-    char *fim;
-    long valor = strtol(s, &fim, 10);
+    char *fim_local;
+    long valor = strtol(s, &fim_local, 10);
+    *fim = fim_local;
+
+    if (fim_local == s) {
+        return PARSE_SEM_DIGITO;
+    }
     if (errno == ERANGE) {
+        return PARSE_OVERFLOW;
+    }
+    if (valor < 0) {
+        return PARSE_NEGATIVO;
+    }
+
+    *saida = valor;
+    return PARSE_OK;
+}
+
+int validaPos(const char *s, long *saida) {
+    char *fim;
+    ResultadoParse resultado = parseLong(s, &fim, saida);
+
+    if (resultado == PARSE_OVERFLOW) {
         fprintf(stderr, "Erro: um ou mais dos argumentos é grande demais.\n");
         return 1;
     }
-    if (fim == s) {
+    if (resultado != PARSE_OK) {
         fprintf(stderr, "Erro: um ou mais argumentos não são números inteiros positivos.\n");
         return 1;
     }
@@ -49,12 +69,11 @@ int validaInt(const char *s, long *saida) {
         fprintf(stderr, "Erro: um ou mais argumentos não são números inteiros positivos.\n");
         return 1;
     }
-    if (valor <= 0) {
+    if (*saida == 0) {
         fprintf(stderr, "Erro: um ou mais argumentos não são números inteiros positivos.\n");
         return 1;
     }
 
-    *saida = valor;
     return 0;
 }
 
@@ -85,12 +104,12 @@ int validaCustomer(const char *f, int m_esperado, Customer *c) {
        for (;;) {
            while (*s == ' ' || *s == '\t') s++;
 
-           errno = 0;
            char *fim;
-           long v = strtol(s, &fim, 10);
-           if (fim == s) { fprintf(stderr, "linha %d: numero esperado\n", n); goto erro; }
-           if (errno == ERANGE) { fprintf(stderr, "linha %d: overflow\n", n); goto erro; }
-           if (v < 0) { fprintf(stderr, "linha %d: valor negativo\n", n); goto erro; }
+           long v;
+           ResultadoParse resultado = parseLong(s, &fim, &v);
+           if (resultado == PARSE_SEM_DIGITO) { fprintf(stderr, "linha %d: numero esperado\n", n); goto erro; }
+           if (resultado == PARSE_OVERFLOW) { fprintf(stderr, "linha %d: overflow\n", n); goto erro; }
+           if (resultado == PARSE_NEGATIVO) { fprintf(stderr, "linha %d: valor negativo\n", n); goto erro; }
            count++;
            s = fim;
 
@@ -139,7 +158,10 @@ int validaCustomer(const char *f, int m_esperado, Customer *c) {
        for (int j = 0; j < m; j++) {
            while (*s == ' ' || *s == '\t') s++;
            char *fim;
-           c->maximum[i][j] = strtol(s, &fim, 10);
+           if (parseLong(s, &fim, &c->maximum[i][j]) != PARSE_OK) {
+               fprintf(stderr, "erro relendo linha %d\n", i + 1);
+               goto erro;
+           }
            s = fim;
            while (*s == ' ' || *s == '\t') s++;
            if (*s == ',') s++;
@@ -149,8 +171,8 @@ int validaCustomer(const char *f, int m_esperado, Customer *c) {
    fclose(fp);
    free(linha);
 
-   c->num_clientes = n;
-   c->num_recursos = m;
+   c->NUMBER_OF_CUSTOMERS = n;
+   c->NUMBER_OF_RESOURCES = m;
    
    return 0;
 
@@ -169,19 +191,19 @@ void liberaCustomer(Customer *c) {
     if (c == NULL) return;
 
     if (c->maximum != NULL) {
-        for (int i = 0; i < c->num_clientes; i++) free(c->maximum[i]);
+        for (int i = 0; i < c->NUMBER_OF_CUSTOMERS; i++) free(c->maximum[i]);
         free(c->maximum);
         c->maximum = NULL;
     }
 
     if (c->allocation != NULL) {
-        for (int i = 0; i < c->num_clientes; i++) free(c->allocation[i]);
+        for (int i = 0; i < c->NUMBER_OF_CUSTOMERS; i++) free(c->allocation[i]);
         free(c->allocation);
         c->allocation = NULL;
     }
 
     if (c->need != NULL) {
-        for (int i = 0; i < c->num_clientes; i++) free(c->need[i]);
+        for (int i = 0; i < c->NUMBER_OF_CUSTOMERS; i++) free(c->need[i]);
         free(c->need);
         c->need = NULL;
     }
@@ -189,6 +211,6 @@ void liberaCustomer(Customer *c) {
     free(c->available);
     c->available = NULL;
 
-    c->num_clientes = 0;
-    c->num_recursos = 0;
+    c->NUMBER_OF_CUSTOMERS = 0;
+    c->NUMBER_OF_RESOURCES = 0;
 }

@@ -179,3 +179,15 @@ arquivo tem 2 coluna(s), esperado 3
 [?2004lexit
 
 Script done on 2026-11-12 16:58:33-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-11-13 15:50:37-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="122" LINES="14"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ ca[K[Kdate
+[?2004lFri Nov 13 15:50:41 -03 2026
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ pwd
+[?2004l/home/skickle/OS/Deadlock
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ whoami
+[?2004lskickle
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [K]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [K]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [K]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ make
+[?2004lgcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -c banker.c -o banker.o
+gcc -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g  -o banker banker.o -pthread
+[?2004h]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ [K]0;skickle@ROADLESS1: ~/OS/Deadlock[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Deadlock[00m$ git add .
+[?2004l
