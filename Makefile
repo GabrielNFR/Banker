@@ -1,17 +1,21 @@
 CC      = gcc
-CFLAGS  = -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g 
-LDFLAGS = -pthread
+CFLAGS  = -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -O2 -g
 
 TARGET = banker
-OBJS   = banker.o
+OBJS   = banker.o parse.o customer.o commands.o
 
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LDFLAGS)
 
-banker.o: banker.c banker.h
-	$(CC) $(CFLAGS) -c banker.c -o $@
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+banker.o: banker.c parse.h customer.h commands.h
+parse.o: parse.c parse.h
+customer.o: customer.c customer.h parse.h
+commands.o: commands.c commands.h parse.h
 
 clean:
 	rm -f $(TARGET) $(OBJS)
