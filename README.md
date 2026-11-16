@@ -1,6 +1,6 @@
 # Algoritmo de Banker
 
-Implementação do algoritmo de Banker (Silberschatz et al., *Operating System Concepts*, 10ª edição, p. P-45) em C. O número de clientes e de recursos é definido pela entrada, não pelo código.
+Implementação do algoritmo de Banker (Silberschatz et al., *Operating System Concepts*, 10ª edição, p. P-45) em C, em um único arquivo `banker.c`. O número de clientes e de recursos é definido pela entrada, não pelo código.
 
 O programa lê `customer.txt` e `commands.txt` do diretório atual, aplica os comandos na ordem e escreve o transcript em `result.txt`.
 
@@ -12,7 +12,7 @@ Requer um compilador C com suporte a `-std=gnu11` e `getline`, como `gcc` ou `cl
 make
 ```
 
-O alvo `make` gera o executável `banker`. Para remover o executável e os objetos:
+O Makefile compila `banker.c` em um único objeto e liga o executável `banker`. Para remover o executável e o objeto:
 
 ```sh
 make clean
@@ -128,12 +128,8 @@ Em qualquer um desses casos, imprime uma mensagem coerente em `stderr` e encerra
 
 | Arquivo | Responsabilidade |
 |:--|:--|
-| `banker.c` | `main`, execução dos comandos e escrita do `result.txt` |
-| `parse.c` / `parse.h` | conversão de texto para `long` com validação |
-| `customer.c` / `customer.h` | estrutura `Customer`, leitura do `customer.txt` e inicialização do estado |
-| `commands.c` / `commands.h` | leitura e validação do `commands.txt` |
-| `safety.c` / `safety.h` | `verificarSeg`, o teste de segurança |
-| `Makefile` | compilação dos módulos e ligação do `banker` |
+| `banker.c` | implementação completa: parsing, estrutura `Customer`, comandos, teste de segurança, execução e `main` |
+| `Makefile` | compila `banker.c` em `banker.o` e liga o executável `banker`; `make clean` remove os dois |
 | `customer.txt` | entrada de exemplo com 5 clientes e 3 recursos |
 | `commands.txt` | comandos de exemplo |
 | `result.txt` | saída esperada para o exemplo |
@@ -171,5 +167,5 @@ Os testes de erro e as sessões completas estão em `evidencias.log`. O relatór
 
 ## Limitações conhecidas
 
-- `RL` não valida se a liberação é maior do que a `Allocation` do cliente. O enunciado não define mensagem para esse caso, então o programa aplica os valores do arquivo. Uma liberação maior pode deixar a `Allocation` negativa.
+- `RL` não valida se a liberação é maior do que a `Allocation` do cliente. O enunciado não define mensagem para esse caso, então o programa aplica os valores do arquivo. Uma liberação maior deixa a `Allocation` negativa, soma ao `Available` recursos que o cliente nunca teve e pode elevar o `Need` acima do `Maximum`. Com isso, o teste de segurança pode considerar seguro um estado impossível.
 - A tabela usa larguras fixas de 10 e 12 caracteres para as colunas, iguais às do `result.txt` de referência. Vetores muito longos podem desalinhar as colunas.
